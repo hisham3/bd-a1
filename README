@@ -1,0 +1,13 @@
+-> Execution steps:
+	--> load.py
+	--> dpre.py (output: res_dpre.csv)
+	--> eda.py (output: eda-in-*.txt)
+	--> vis.py (output: vis.png)
+	--> model.py (output: k.txt)
+
+-> Docker commands used:
+	docker build --tag=bd-a1 .
+	docker run -it bd-a1 bash
+	docker cp bd-a1:/home/vis.png ./service-result/
+	docker login -u hesmamdouh
+	doocker push hesmamdouh/<image>:tag
